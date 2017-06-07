@@ -1,9 +1,7 @@
 /* Requires the Docker Pipeline plugin */
 node('docker') {
     checkout scm
-    stage('Build') {
-        docker.image('reg.terragoedge.atl/jenkins_edge_server:1.0').inside {
-            sh 'echo hello'
-        }
-    }
+    
+    def myApp = docker.build "reg.terragoedge.atl/jenkins_edge_server::${env.BUILD_TAG}"
+    myApp.push()
 }
