@@ -3,5 +3,5 @@ node('docker') {
     checkout scm
     echo "yolo hoho"
     def myApp = docker.build "reg.terragoedge.atl/jenkins_edge_server:${env.BUILD_TAG}"
-    myApp.push()
+   // myApp.push()
 }
