@@ -12,3 +12,5 @@ ADD startbuild.sh /app
 # Make port 8080 and 5000 available to the world outside this container
 EXPOSE 8080
 EXPOSE 5000
+
+#testing
